@@ -1,0 +1,24 @@
+rails new myarticles --api --database=postgresql
+
+debajo de pool
+
+username: postgres
+password: apolo
+
+http://localhost:3000/api/v1/articles
+https://insomnia.rest/
+
+Pasos para versionar el api
+1. en el config/routes.rb
+pasar las rutas a
+
+
+  namespace 'api' do
+    namespace 'v1' do
+            resources :users
+            resources :articles
+    end
+  end 
+  
+ 2. pasar el controlador users a la carpeta API/V1
+ 3. cambiar nombre controlador Api::V1::UsersController
